@@ -9,8 +9,8 @@ void loop()
 {
   float degreesF;
 
-  // Read the pin output, convert to volts, then to C, then to F
-  degreesF = (((analogRead(pin) * 0.004882814) - 0.5) * 180) + 32.0;
+  // Pin conversion to fahrenheit
+  degreesF = ((analogRead(pin) * 0.878907) - 58);
   
   Serial.print("Degrees F: ");
   Serial.println(degreesF);
